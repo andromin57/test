@@ -1,0 +1,13 @@
+name: My littre path
+on: [push]
+env: 
+  variable: "Je suis une variable mere"
+jobs: 
+  jobs1: 
+    runs-on: ubuntu-latest
+    env: 
+      variable: "Je suis une variable enfant"
+    steps:
+    - uses: actions/checkout@v3
+    - name: hello world
+      run: echo "Hello World"
