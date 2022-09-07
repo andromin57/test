@@ -5,14 +5,14 @@ env:
 jobs: 
   jobs1: 
     runs-on: ubuntu-latest
-    env: 
-      age: 100
     steps:
     - uses: actions/checkout@v3
     - name: hello world
       run: echo $variable
   jobs2: 
     runs-on: ubuntu-latest
+    env: 
+      age: 100
     steps:
     - uses: actions/checkout@v3
     - name: hello world
