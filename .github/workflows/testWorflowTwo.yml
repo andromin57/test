@@ -6,8 +6,14 @@ jobs:
   jobs1: 
     runs-on: ubuntu-latest
     env: 
-      variable: "Je suis une variable enfant"
+      age: 100
     steps:
     - uses: actions/checkout@v3
     - name: hello world
-      run: echo "Hello World"
+      run: echo $variable
+  jobs2: 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: hello world
+      run: echo $age
